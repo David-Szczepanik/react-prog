@@ -87,7 +87,6 @@ function App() {
     return total + (programmer.type === "junior" ? 100 : 200);
   }, 0);
 
-
   return (
     <div className="App">
       <Helmet><title>React - Programátoři</title></Helmet>
