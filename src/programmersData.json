@@ -1,0 +1,16 @@
+{
+  "programmers": [
+    {
+      "id": 1,
+      "name": "John",
+      "surname": "Carmack",
+      "type": "senior"
+    },
+    {
+      "id": 2,
+      "name": "Bjarne",
+      "surname": "Stroustrup",
+      "type": "junior"
+    }
+  ]
+}
