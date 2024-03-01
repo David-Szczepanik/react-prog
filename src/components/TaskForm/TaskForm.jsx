@@ -33,9 +33,9 @@ function TaskForm({
   }, [volume, setProgrammerVolume]);
 
 
-const buttonStyle = {
-  backgroundColor: totalVolume >= linesPerDay ? 'green' : 'red'
-};
+  const buttonStyle = {
+    backgroundColor: (volume.lines === "" || volume.days === "") ? 'red' : (totalVolume >= linesPerDay ? 'green' : 'red')
+  };
 
   return (
     <div className="programmer-form">
@@ -56,9 +56,10 @@ const buttonStyle = {
         onChange={handleStorage}
       />
 
-      <button style={buttonStyle} disabled={totalVolume < linesPerDay} onClick={onAdd}>
-  Schválit úkol
-</button>
+      <button style={buttonStyle} disabled={volume.lines === "" || volume.days === "" || totalVolume < linesPerDay}
+              onClick={onAdd}>
+        Schválit úkol
+      </button>
     </div>
   );
 }
